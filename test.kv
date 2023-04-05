@@ -1,0 +1,23 @@
+#:kivy 2.0
+MyLayout:
+<MyLayout> :
+
+    Button:
+        size_hint : None, None
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        text: 'Hello from test.kv'
+        size :  min(self.parent.width, self.parent.height), min(self.parent.width, self.parent.height)
+        borders : 0, 0, 0,0
+        on_press : root.reload_qr(qr_code)
+    BoxLayout :
+        id : BoxLay
+        size_hint: (1, 1)
+        Image:
+            id : qr_code
+            source: 'image.png'
+            size_hint: (1, 1)
+            keep_ratio: True
+            allow_stretch: True
+
+
+
