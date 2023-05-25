@@ -64,7 +64,8 @@ def data_url_to_png(data_url):
     return decoded_image_data
 
 def get_qr_code_binary():
-    return data_url_to_png(get_data_url_qr())
+    qr_data_url = get_data_url_qr()
+    return data_url_to_png(qr_data_url)
 # save the image data to a PNG file
 
 
